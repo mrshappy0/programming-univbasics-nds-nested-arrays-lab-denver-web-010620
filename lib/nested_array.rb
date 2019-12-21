@@ -23,9 +23,8 @@ def assembled_matrix
   # Make sure conventional produce is first, on the 'zeroth' / 'bottom' shelf
   
   matrix = [
-      [CONVENTIONAL_PRODUCE.sort], [ORGANIC_PRODUCE.sort]
-      #[ "Grapefruit", "Pineapple", "Oranges", "Watermelon", "Eggplant"],
-      #[ "Strawberries", "Potatoes", "Grapes", "Avocadoes", "Asparagus"]
+      [ "Grapefruit", "Pineapple", "Oranges", "Watermelon", "Eggplant"],
+      [ "Strawberries", "Potatoes", "Grapes", "Avocadoes", "Asparagus"]
       
     ]
 end
@@ -34,6 +33,9 @@ def sorted_matrix
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
   # However, this time, sort each internal array alphabetically by the first character
+  matrix = [
+    CONVENTIONAL_PRODUCE.sort, ORGANIC_PRODUCE.sort
+    ]
 end
 
 def matrix_lookup(matrix, row, column)
